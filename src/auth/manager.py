@@ -1,14 +1,14 @@
 """
 This file indicates actions we can apply to our User model
 """
-import uuid
 from typing import Optional
 
 from fastapi import Depends, Request
 from fastapi_users import BaseUserManager, IntegerIDMixin, schemas, models, exceptions
 
 from config import MANAGER_SECRET
-from .database import User, get_user_db
+from .models import User
+from .utils import get_user_db
 
 SECRET = MANAGER_SECRET
 
