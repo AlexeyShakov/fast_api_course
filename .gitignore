@@ -1,3 +1,4 @@
 .idea
 useful.txt
 venv
+__pycache__

@@ -1,7 +1,10 @@
+from datetime import datetime
+
 from sqlalchemy import Table, Column, Integer, String, TIMESTAMP, MetaData
 
-metadata = MetaData()
+from database import Base
 
+metadata = MetaData()
 
 operation = Table(
     "operation",
@@ -10,6 +13,8 @@ operation = Table(
     Column("quantity", String),
     Column("figi", String),
     Column("instrument_type", String, nullable=True),
-    Column("date", TIMESTAMP),
+    Column("date", TIMESTAMP, default=datetime.utcnow),
     Column("type", String),
 )
+
+
