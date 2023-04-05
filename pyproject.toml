@@ -1,0 +1,6 @@
+# Настройки для pytest
+[tool.pytest.ini.options]
+pythonpath = [
+    "/","src",
+]
+asyncio_mode="auto"
